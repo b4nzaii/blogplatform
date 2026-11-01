@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-
+  <title>Posts</title>
   <link rel="stylesheet" href="style.css">
   <script src="post.js" defer></script>
 </head>
+
 <body>
   <header>
     <h1>Min blogg</h1>
@@ -15,17 +15,45 @@
   </header>
   <main>
     <a href="index.html">Tillbaka till startsidan</a>
-
     <p class="message"></p>
+    <article id="post-detail" class="post-card"></article>
+    <h2>Edit post</h2>
+    <form id="edit-form">
+      <label for="edit-title">Title:</label>
+      <input type="text" id="edit-title" required>
 
-    <article id ="post-detail" class="post-card"></article>
+      <label for="edit-body">Content:</label>
+      <textarea id="edit-body" required></textarea>
+
+      <button type="submit">Save changes</button>
+    </form>
+    <h2>Delete post</h2>
+    <button id="delete-btn">Delete post</button>
+    <p id="delete-status"></p>
+
+    <p id="edit-status"></p>
     <section>
       <h2>Comments</h2>
 
       <p id="comments-message"></p>
       <div id="comments-list"></div>
+
+      <form id="comment-form">
+        <h3>Add a comment</h3>
+
+        <label for="comment-body">Your comment:</label>
+        <textarea id="comment-body" required></textarea>
+
+        <button type="submit">Submit comment</button>
+      </form>
+
+      <p id="comment-status"></p>
+
     </section>
   </main>
-  <footer><p>&copy; 2023 Min blogg. Alla rättigheter förbehållna.</p></footer>
+  <footer>
+    <p>&copy; 2026.</p>
+  </footer>
 </body>
+
 </html>

@@ -1,28 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-
+  <title>Bloggsida</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
+
 <body>
-<header>
-  <h1>Min blogg</h1>
-  <p>Välkommen</p>
-</header>
-<main>
-  <h2>Blogginlägg</h2>
+  <header>
+    <h1>Min blogg</h1>
+    <p>Välkommen</p>
+  </header>
+  <main>
+    <h2>Blogginlägg</h2>
+    <label for="search-input">Search posts:</label>
+    <input type="text" id="search-input" placeholder="Search...">
+    <label for="tag-filter">Filter by tag:</label>
+    <select id="tag-filter">
+      <option value="">All tags</option>
+    </select>
+    <label for="sort-posts">Sort by:</label>
+    <select id="sort-posts">
+      <option value="">Default</option>
+      <option value="most-views">Most views</option>
+      <option value="least-views">Least views</option>
+      <option value="most-likes">Most likes</option>
+    </select>
+    <p class="message"></p>
+    <section id="post-list">
+      <p>Blog posts here</p>
+    </section>
+  </main>
 
-  <p class="message"></p>
-
-  <section id="post-list">
-    <p>Blog posts here</p>
-  </section>
-</main>
-
-<footer><p>&copy; 2023 Min blogg. Alla rättigheter förbehållna.</p></footer>
+  <footer>
+    <p>&copy; 2023 Min blogg. Alla rättigheter förbehållna.</p>
+  </footer>
 </body>
+
 </html>
